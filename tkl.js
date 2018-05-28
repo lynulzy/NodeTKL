@@ -10,6 +10,7 @@ var targetUrl = 'http://api.m.taobao.com/rest/h5ApiUpdate.do?callback=jsonp11&ti
 function requestTaoCode(taoCode) {
     console.log(targetUrl);
     http.get(targetUrl, (res) => {
+        
         const {statusCode} = res;
         let data = '';
         res.on('data', (chunk) => {
