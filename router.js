@@ -1,11 +1,25 @@
+var fs = require('fs');
 function route(pathname, response) {
-    console.log(response);
+    // console.log(response);
     if(pathname = '/') {
         //index
         response.writeHead(200, {'Content-Type': 'text/html'});
-        response.write('<h>这是一个网页标题</h>');
-        response.end();
+        var htmlPath = __dirname + '/views/' + 'inputcode.htm';
+        // console.log(typeof(htmlPath));
+        fs.readFile(htmlPath, function(err,data) {
+            if (err) {
+                return console.log(err.message);
+            }
+            var htmlstr = data.toString();
+            // console.log(htmlstr);
+            response.write(htmlstr);
+            response.end();
+        });        
         return;
+    }
+    if(pathname = '/changeCode') {
+
+        console.log(response.url.query());
     }
     response.writeHead({'Content-Type': 'text/plain'});
     response.write('This adress has not been implemented');
