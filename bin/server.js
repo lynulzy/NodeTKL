@@ -13,6 +13,6 @@ function start (route) {
         // response.end();
     }
     http.createServer(onRequest).listen(port);
-    console.log("Server started");
+    console.log("Server started port: " + port.toString());
 }
 exports.start = start;

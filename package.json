@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/lynulzy/NodeTKL/issues"
   },
-  "homepage": "https://github.com/lynulzy/NodeTKL#readme"
+  "homepage": "https://github.com/lynulzy/NodeTKL#readme",
+  "dependencies": {
+    "vue": "^2.5.16"
+  }
 }

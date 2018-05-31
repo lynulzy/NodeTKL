@@ -4,7 +4,8 @@ function route(pathname, response) {
     if(pathname = '/') {
         //index
         response.writeHead(200, {'Content-Type': 'text/html'});
-        var htmlPath = __dirname + '/views/' + 'inputcode.htm';
+        const indexFileName = 'index.vue'
+        var htmlPath = __dirname + '/views/' + indexFileName;
         // console.log(typeof(htmlPath));
         fs.readFile(htmlPath, function(err,data) {
             if (err) {
